@@ -5,3 +5,11 @@
 remote urlがsshの場合は、ssh公開鍵を使う従来の方法。httpsを使ったほうが、若干速度が出るかも？
 
 https://help.github.com/ja/github/using-git/which-remote-url-should-i-use#cloning-with-https-urls-recommended
+
+## mergeの方向
+思ってたんと違った。
+topic -> master ブランチに変更をmergeする場合
+```
+$ git checkout master
+$ git merge topic
+```
