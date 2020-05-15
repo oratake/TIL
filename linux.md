@@ -31,3 +31,8 @@ Shebangから書き始める
 setxkbmap -option ctrl:nocaps
 xset r rate 190 26
 ```
+
+## パッケージマネージャ (UbuntuとArchのちがい)
+
+Archはだいたい `pacman -S foobar` でいける。その他もリポジトリ設定などせずとも、だいたいAUR `yay -S foobar` とかで行ける
+Ubuntuの場合、 `apt install foobar` か、ない場合は汎用の `snap install foobar` をつかう。
