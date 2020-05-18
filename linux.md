@@ -36,3 +36,11 @@ xset r rate 190 26
 
 Archはだいたい `pacman -S foobar` でいける。その他もリポジトリ設定などせずとも、だいたいAUR `yay -S foobar` とかで行ける
 Ubuntuの場合、 `apt install foobar` か、ない場合は汎用の `snap install foobar` をつかう。
+
+## よく使うディレクトリ
+
+### Ubuntu
+
+- font
+  - /usr/share/fonts/
+  - fonts以下に種類、それ以下にフォントファミリごとディレクトリ切ってるのをよくみる
