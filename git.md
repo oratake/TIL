@@ -19,3 +19,11 @@ windowsでgitを入れた場合、初期でcore.autocrlfがtrueにしようと�
 trueの場合、checkoutでCRLF、commit時にLFに変換が走る。
 inputの場合、checkoutで何もせず、commit時にLFに変換。
 なので、PHPerならPSR-2に基づいてinputの設定でLFによせていいのでは。
+
+## commitのAuthorを変更
+
+configにnameとemailを設定しそびれて、別なAuthorでcommitされてしまった場合。
+
+```
+$ git commit --amend --author='oratake <smith.shimomura@gmail.com>'
+```
