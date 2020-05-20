@@ -32,6 +32,24 @@ setxkbmap -option ctrl:nocaps
 xset r rate 190 26
 ```
 
+## AppImageなど、ランチャに引っかからないApplicationの処遇
+
+自分で `*.desktop` を作成し、配置することでランチャに分からせてやる。  
+デスクトップエントリーファイルと言われてた  
+参考: https://wiki.archlinux.jp/index.php/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97%E3%82%A8%E3%83%B3%E3%83%88%E3%83%AA
+
+標準的な置き場所は以下
+
+```
+# システム全体でのアプリ
+/usr/share/applications
+/usr/local/share/applications
+# ユーザ個別のアプリ
+~/.local/share/applications
+```
+
+アプリエントリの例はArchwiki見ればいいので省略
+
 ## パッケージマネージャ (UbuntuとArchのちがい)
 
 Archはだいたい `pacman -S foobar` でいける。その他もリポジトリ設定などせずとも、だいたいAUR `yay -S foobar` とかで行ける
