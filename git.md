@@ -27,3 +27,20 @@ configにnameとemailを設定しそびれて、別なAuthorでcommitされて�
 ```
 $ git commit --amend --author='oratake <smith.shimomura@gmail.com>'
 ```
+
+## switchとrestore (バイバイcheckout)
+checkoutの責務がでかい。ので git -v 2.23 より switch/restore が採用。
+
+### switch
+
+```
+$ git checkout -b hogepiyo
+$ git switch -c hogepiyo
+```
+
+## restore
+
+```
+$ git checkout .
+$ git restore .
+```
