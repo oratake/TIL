@@ -25,7 +25,13 @@ inputの場合、checkoutで何もせず、commit時にLFに変換。
 configにnameとemailを設定しそびれて、別なAuthorでcommitされてしまった場合。
 
 ```
-$ git commit --amend --author='oratake <smith.shimomura@gmail.com>'
+$ git commit --amend --author='username_is_here <here.is.your@mail.address>'
+```
+
+もしくは、configに設定を記述したあと以下でも
+
+```
+$ git commit --amend --reset-author
 ```
 
 ## switchとrestore (バイバイcheckout)
