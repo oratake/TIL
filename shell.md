@@ -22,3 +22,17 @@ $ /usr/bin/env ruby ./sample04.rb
 ↑等価↓
 $ ./sample04.rb
 ```
+
+## いまのShellを表示
+
+ユーザの起動SHELLを表示 (環境変数$SHELLに入っているのでecho)
+
+```
+$ echo $SHELL
+```
+
+今ちょうど使っているshellの表示
+
+```
+$ echo $0
+```
