@@ -36,3 +36,10 @@ $ echo $SHELL
 ```
 $ echo $0
 ```
+
+## zshrcなどの読み込み順
+
+zshrnv > zprofile > zshrc > zlogin
+各々、global ( /etc/* ), local ( ~/.* ) の順で読まれる
+
+https://qiita.com/muran001/items/7b104d33f5ea3f75353f
