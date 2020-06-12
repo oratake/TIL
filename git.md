@@ -14,6 +14,17 @@ $ git checkout master
 $ git merge topic
 ```
 
+## rebaseの対象
+
+topicをmasterに追いつくようにrebaseする
+
+```
+$ git checkout topic
+$ git rebase master
+## もしくは...
+$ git rebase master topic
+```
+
 ## configのautocrlf
 windowsでgitを入れた場合、初期でcore.autocrlfがtrueにしようとする。  
 trueの場合、checkoutでCRLF、commit時にLFに変換が走る。
