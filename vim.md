@@ -21,3 +21,18 @@
 ```
 :%s/\s//
 ```
+
+## Setting
+
+### linux上でのnvimのクリップボード
+
+neovimではクリップボードとの連携がないので、shell commandを使用する  
+Linuxではxclipを使える
+
+```
+:set clipboard+=unnamedplus
+```
+
+`:help clipboard` 参照のこと
+
+参考: https://qiita.com/gotchane/items/0e7e6e0d5c7fa9f55c1a
