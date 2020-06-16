@@ -55,9 +55,21 @@ $ git checkout -b hogepiyo
 $ git switch -c hogepiyo
 ```
 
-## restore
+### restore
 
 ```
 $ git checkout .
 $ git restore .
+```
+
+## ブランチ名がない (HEAD)
+
+rebase で squash したら、元のブランチが残って、別なブランチが生えてしまった  
+そしてなぜかブランチ名がなくなった。  
+派生元のコミットから生えているが、HEADとしか書かれておらず、ブランチ名ではなくコミットハッシュが表示されていた
+
+対処
+```
+# とりあえずHEAD上でブランチ切る
+$ git checkout -b <BRANCH>
 ```
