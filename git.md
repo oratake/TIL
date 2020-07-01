@@ -14,9 +14,9 @@ $ git checkout master
 $ git merge topic
 ```
 
-## rebaseの対象
+## rebaseでtopicをmasterに追いつかせる
 
-topicをmasterに追いつくようにrebaseする
+`topic` から `master` に `rebase`
 
 ```
 $ git checkout topic
