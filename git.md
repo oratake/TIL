@@ -25,6 +25,14 @@ $ git rebase master
 $ git rebase master topic
 ```
 
+## rebase --ontoで詳細に指定
+
+`--onto` のあと3つ続けて指定
+
+```
+$ git rebase --onto 根っこに指定したいコミット いまの根っこ 動かしたいブランチ
+```
+
 ## configのautocrlf
 windowsでgitを入れた場合、初期でcore.autocrlfがtrueにしようとする。  
 trueの場合、checkoutでCRLF、commit時にLFに変換が走る。
