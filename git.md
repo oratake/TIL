@@ -81,3 +81,21 @@ rebase で squash したら、元のブランチが残って、別なブラン�
 # とりあえずHEAD上でブランチ切る
 $ git checkout -b <BRANCH>
 ```
+
+## resetで取り消す
+
+gitにおける状態の理解から
+
+|用語|状態|
+|---|---|
+|HEAD|最新のコミット|
+|index|最新のステージング|
+|working tree|現状のファイル|
+
+を踏まえて操作対象は以下の通り
+
+|git reset hoge|HEAD|index|working tree|
+|---|---|---|---|
+|--soft|○|||		
+|(no option)|○|○||
+|--hard|○|○|○|
