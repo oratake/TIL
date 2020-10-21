@@ -43,3 +43,8 @@ zshrnv > zprofile > zshrc > zlogin
 各々、global ( /etc/* ), local ( ~/.* ) の順で読まれる
 
 https://qiita.com/muran001/items/7b104d33f5ea3f75353f
+
+## ファイル名フックしてその中身全部からgrep
+
+例: phpファイルから
+`$ find ./src/ -type f -name "*php" | xargs grep -n "hogepiyo_114514`
