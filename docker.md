@@ -1,6 +1,17 @@
 # Docker
 
-おもにLinux内でDocker使うやつ
+おもに(Arch)Linux内でDocker使うやつ
+
+## 情報
+
+- [Awesome Docker](https://github.com/veggiemonk/awesome-docker)
+dockerの情報スタック  
+日本語まとめブログ  
+https://wonderwall.hatenablog.com/entry/docker-awesome
+
+- [Awesome Compose](https://github.com/docker/awesome-compose)
+docker-composeのデザインパターン集  
+GoとMySQLの例、みたいなのが乗ってる  
 
 ## やらかしたときの初期化
 
