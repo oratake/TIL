@@ -48,3 +48,17 @@ https://qiita.com/muran001/items/7b104d33f5ea3f75353f
 
 例: phpファイルから
 `$ find ./src/ -type f -name "*php" | xargs grep -n "hogepiyo_114514`
+
+## エイリアスを一時的に無効化
+
+.zshrc等でつけていたエイリアスをその場だけ無効にして実行したい場合は、コマンドをエスケープ
+
+```
+$ \docker-compose ps -a
+```
+
+そのセッション中無効にしたいなら
+
+```
+$ unalias d-c # これでもともとsudo docker-composeされていたのが、d-cのエイリアスが剥がれる
+```
