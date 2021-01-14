@@ -16,6 +16,8 @@ $ git merge topic
 
 ## rebaseでtopicをmasterに追いつかせる
 
+編集中のtopic(feature)ブランチに対して、本流(master)から新しいcommitを入れて追いつかせる、というあたり  
+
 `topic` から `master` に `rebase`
 
 ```
@@ -35,8 +37,8 @@ $ git rebase --onto 根っこに指定したいコミット いまの根っこ �
 
 ## configのautocrlf
 windowsでgitを入れた場合、初期でcore.autocrlfがtrueにしようとする。  
-trueの場合、checkoutでCRLF、commit時にLFに変換が走る。
-inputの場合、checkoutで何もせず、commit時にLFに変換。
+trueの場合、checkoutでCRLF、commit時にLFに変換が走る。  
+inputの場合、checkoutで何もせず、commit時にLFに変換。  
 なので、PHPerならPSR-2に基づいてinputの設定でLFによせていいのでは。
 
 ## commitのAuthorを変更
@@ -52,6 +54,19 @@ $ git commit --amend --author='username_is_here <here.is.your@mail.address>'
 ```
 $ git commit --amend --reset-author
 ```
+
+過去全てのauthorを変更して良ければ
+
+```
+$ git filter-branch -f --env-filter \
+  "GIT_AUTHOR_NAME='new'; \
+   GIT_AUTHOR_EMAIL='new@example.com'; \
+   GIT_COMMITTER_NAME='new'; \
+   GIT_COMMITTER_EMAIL='new@example.com';" \
+   HEAD
+```
+
+参照: https://qiita.com/y10exxx/items/dcea0e39788d649ca8ba
 
 ## switchとrestore (バイバイcheckout)
 checkoutの責務がでかい。ので git -v 2.23 より switch/restore が採用。
@@ -99,3 +114,15 @@ gitにおける状態の理解から
 |--soft|○|||		
 |(no option)|○|○||
 |--hard|○|○|○|
+
+## 間違って本流ブランチでコミットを積んじゃったので別ブランチにする
+
+`master` に積みまくった。ほんとは `feature-hoge_piyo` にするつもりだった。  
+
+```
+$ git switch -c <本来切りたかったコミット名>
+$ git switch <本流ブランチ>
+$ git reset --hard <分岐元コミットハッシュ>
+# 最後にoriginと合わせる必要があれば合わせる
+$ git push -f origin
+```
