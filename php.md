@@ -21,9 +21,22 @@ https://www.php.net/manual/ja/pdo.prepare.php
 
 PDOでクエリ流す場合、3種類ぐらいやり方がある
 
-- PDO::exec()
+- PDO::exec()  
 returnがinsertされた行数。select文でとっても値取り出せない。
-- PDO::query()
+- PDO::query()  
 returnがPDOStatementで、select文など結果を返す
-- PDOStatement::execute()
+- PDOStatement::execute()  
 プリペアドステートメント。セキュリティ上、PDOでDB操作やるならこれでよさそう
+
+## \Throwable
+
+javaとか同様、\Throwable は PHP でもErrorとかException全部のスーパークラスみたいな  
+(クラスというか実際はインターフェース)
+
+> Throwable は、throw 文でスロー可能なあらゆるオブジェクトが実装する基底インターフェイスです。 Error や Exception も、これを実装しています。  
+https://www.php.net/manual/ja/class.throwable.php
+
+catch (\Throwable $e) で全部とれる
+
+Throwable みたいなノリで、「〜できる性質を付加」みたいな意味合いで Hogeable みたいなクラス作る場合あり (Generatableとか)  
+phpならinterfaceとかtraitでつくる人多いそうな
