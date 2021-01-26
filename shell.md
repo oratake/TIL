@@ -62,3 +62,30 @@ $ \docker-compose ps -a
 ```
 $ unalias d-c # これでもともとsudo docker-composeされていたのが、d-cのエイリアスが剥がれる
 ```
+
+## 配列とそのforeach
+
+複数バッチに開始日と終了日を指定して実行、みたいな例
+
+```
+#!/bin/bash
+# usage: ./hogepiyo.sh <start-date> <end-date>
+
+# 開始日、終了日
+start=$1
+end=$2
+
+# 実行するスクリプト
+scripts=(
+    script1.sh
+    script2.sh
+    # その他いっぱい...
+)
+
+for script in ${scripts[@]}
+do
+    echo ${script}
+    echo "--------------------" 
+    ./${script} ${start} ${end}
+done
+```
