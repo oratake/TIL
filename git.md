@@ -126,3 +126,13 @@ $ git reset --hard <分岐元コミットハッシュ>
 # 最後にoriginと合わせる必要があれば合わせる
 $ git push -f origin
 ```
+
+## cherry-pick
+
+他のブランチから一部持ってきたい、などの場合
+
+```
+$ git cherry-pick -e <commit_hash>
+```
+
+-e でエディタが開き、コミットコメントの編集をしつつ持ってこれる。
