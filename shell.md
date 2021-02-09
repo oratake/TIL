@@ -89,3 +89,15 @@ do
     ./${script} ${start} ${end}
 done
 ```
+
+## less
+
+大体ここ参照: https://qiita.com/delphinus/items/b04752bb5b64e6cc4ea9
+
+### 色付きで表示
+
+`docker-compose logs` なんかをパイプでlessに渡して見たいケース。普通にやると ANSI カラーエスケープシーケンスでごちゃごちゃになるが、  
+```
+$ docker-compose logs | less -R +F
+```
+これでOK。+F は `tail -f` 同様、logが増えても最新を追うやつ
