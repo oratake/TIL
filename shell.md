@@ -101,3 +101,17 @@ done
 $ docker-compose logs | less -R +F
 ```
 これでOK。+F は `tail -f` 同様、logが増えても最新を追うやつ
+
+## パイプでsudo使う
+
+パイプでsudoが必要な箇所に何かを渡そうとすると、permission deniedとか言われちゃう
+```
+$ sudo echo 500 > /sys/class/backlight/intel_backlight/brightness
+zsh: permission denied: /sys/class/backlight/intel_backlight/brightness
+```
+
+のでshで囲ってsudoしてやると良い
+
+```
+$ sudo sh -c "echo 500 > /sys/class/backlight/intel_backlight/brightness"
+```
