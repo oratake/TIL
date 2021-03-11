@@ -37,6 +37,14 @@ $ echo $SHELL
 $ echo $0
 ```
 
+## スクリプトを実行しているディレクトリの取得
+
+実行しているファイルのパスを確認したいとき
+```
+SCRIPT_DIR=$(cd $(dirname $0); pwd)
+```
+あと `$SCRIPT_DIR` で呼び出して使うとか
+
 ## zshrcなどの読み込み順
 
 zshrnv > zprofile > zshrc > zlogin
