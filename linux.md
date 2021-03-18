@@ -55,6 +55,25 @@ xset r rate 190 26
 Archはだいたい `pacman -S foobar` でいける。その他もリポジトリ設定などせずとも、だいたいAUR `yay -S foobar` とかで行ける
 Ubuntuの場合、 `apt install foobar` か、ない場合は汎用の `snap install foobar` をつかう。
 
+## GUIアプリのパッケージ管理
+
+参考: Ubuntuでflatpakの使い方 - https://linuxfan.info/flatpak-ubuntu
+
+macとかのhomebrewだと `$ homebrew cask` のようにGUIアプリのパッケージマネージャがある程度ある
+
+主要なものは3つ
+
+- Snap
+  - Ubuntuだとプリインストール
+- AppImage
+  - パッケージマネージャというよりは、そういうパッケージ形式
+- Flatpak
+```
+❯ flatpak search firefox
+flatpak: /usr/lib/libc.so.6: version `GLIBC_2.33' not found (required by flatpak)
+```
+GNU C ライブラリのパッケージがないと。 `$ sudo pacman -S glibc` したら動いた
+
 ## よく使うディレクトリ
 
 ### Ubuntu
