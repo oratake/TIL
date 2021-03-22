@@ -74,6 +74,17 @@ flatpak: /usr/lib/libc.so.6: version `GLIBC_2.33' not found (required by flatpak
 ```
 GNU C ライブラリのパッケージがないと。 `$ sudo pacman -S glibc` したら動いた
 
+## キーマップいじり (setxkbmap)
+
+setxkbmap でGUI時のキーバインドをわりと簡単にいじれる  
+
+```
+$ setxkbmap -option ctrl:nocaps -option altwin:swap_alt_win
+```
+
+オプションを消去したい場合は `-option` のみ指定  
+現状のオプションやキーボードモデルの設定確認は `-query`
+
 ## よく使うディレクトリ
 
 ### Ubuntu
