@@ -16,9 +16,9 @@ $ git merge topic
 
 ## rebaseでtopicをmasterに追いつかせる
 
-編集中のtopic(feature)ブランチに対して、本流(master)から新しいcommitを入れて追いつかせる、というあたり  
+編集中のtopic(feature)ブランチを、本流(master)にのせかえて(rebase)最新の状態に追いつかせる  
 
-`topic` から `master` に `rebase`
+`topic` を `master` に `rebase`
 
 ```
 $ git checkout topic
