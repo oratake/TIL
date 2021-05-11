@@ -1,5 +1,24 @@
 # Git
 
+## CheatSheet
+
+### .gitignore (gibo自動生成)
+
+giboはaptにはなさそう。archはAURにありそう。linuxbrewとmacは以下
+```
+$ brew install gibo
+```
+
+リスト
+```
+$ gibo list | grep -i jav #パイプで渡して検索できる
+```
+
+dumpのサンプル
+```
+$ gibo dump visualstudio jetbrains node >> .gitignore
+```
+
 ## Remote URLをhttpsにしたときの認証
 トークンを発行して、passwordの入力にいれて使う。  
 remote urlがsshの場合は、ssh公開鍵を使う従来の方法。httpsを使ったほうが、若干速度が出るかも？
