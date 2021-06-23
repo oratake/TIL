@@ -22,3 +22,25 @@ MySQLのInnoDBのロック挙動調査 (いちりんめも)
 - https://github.com/ichirin2501/doc/blob/master/innodb.md
 
 Keyword: InnoDB, MySQL, トランザクション, ダーティリード, ファジーリード, ファントムリード, READ COMMITTED, REPEATABLE READ
+
+## 参考URL
+
+- AI Shift(CyberAgent子会社) SQL資料
+https://speakerdeck.com/yutamiyake/sql-training-2021
+  - データベース
+  - SQL
+    - キー
+    - 集約関数
+    - JOIN
+  -トランザクション
+    - ACID 特性
+    - ファジー・ファントムリード
+  - データベース設計
+    - ER モデル
+    - カーディナリティ
+    - 正規形
+  - ボイスコッド正規形
+  - インデックス
+    - B+ Tree
+  - 実行計画
+  - SQL II
