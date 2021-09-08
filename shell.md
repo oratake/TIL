@@ -123,3 +123,12 @@ zsh: permission denied: /sys/class/backlight/intel_backlight/brightness
 ```
 $ sudo sh -c "echo 500 > /sys/class/backlight/intel_backlight/brightness"
 ```
+
+## grepで全文検索
+
+```
+$ grep -irl hogepiyo ./
+```
+`-i` ケース無視
+`-l` ファイル名のみを扱う
+`-r` 指定ディレクトリ(第二引数)以下を対象
