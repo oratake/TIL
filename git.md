@@ -155,3 +155,8 @@ $ git cherry-pick -e <commit_hash>
 ```
 
 -e でエディタが開き、コミットコメントの編集をしつつ持ってこれる。
+
+## コミットしたAuthorとかEmailとか間違えた
+
+一括変更したいとき  
+https://tech-1natsu.hatenablog.com/entry/2018/10/19/021855
