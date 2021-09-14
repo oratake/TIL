@@ -160,3 +160,10 @@ $ git cherry-pick -e <commit_hash>
 
 一括変更したいとき  
 https://tech-1natsu.hatenablog.com/entry/2018/10/19/021855
+
+## 追跡されていない(untrackedな)ファイルをキレイキレイする
+
+```
+$ git clean -dn # ディレクトリ含む、dry-run
+$ git clean -df # ディレクトリ含む、実際の削除
+```
