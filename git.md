@@ -167,3 +167,14 @@ https://tech-1natsu.hatenablog.com/entry/2018/10/19/021855
 $ git clean -dn # ディレクトリ含む、dry-run
 $ git clean -df # ディレクトリ含む、実際の削除
 ```
+
+## gitコマンドでやらかした際のundo (git reflog)
+
+```
+$ git reflog # まずこれで操作の確認
+8c26a9a (HEAD -> feature/hogepiyo, origin/develop, develop) HEAD@{0}: rebase (finish): returning to refs/heads/feature/hogepiyo
+8c26a9a (HEAD -> feature/hogepiyo, origin/develop, develop) HEAD@{1}: rebase (start): checkout develop
+8c26a9a (HEAD -> feature/hogepiyo, origin/develop, develop) HEAD@{2}: pull origin develop: Fast-forward
+a856485 HEAD@{3}: checkout: moving from feature/hogepiyo to develop
+$ git reset --hard HEAD@{3} # 直前の操作前まで戻れる
+```
