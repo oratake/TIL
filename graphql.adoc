@@ -1,0 +1,7 @@
+= GraphQL
+
+* GraphQLはあくまで仕様。実装については各々に任せられている。
+* LaravelでのGraphQLサーバはLighthouseを利用
+参考link:https://speakerdeck.com/d_endo/laravel-plus-lighthousedeshi-merudi-kosutonagraphqlru-men[Laravel + Lighthouseで始める低コストなGraphQL入門 - SpeakerDeck]
+* React側からはhttpクライアントからリクエストを飛ばす
+** .graphqlスキーマからcodegenなどで `useHogehoge` などを生成することでリクエストを使いやすくする
