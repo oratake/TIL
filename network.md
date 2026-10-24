@@ -16,3 +16,18 @@
  192.168.0.201   34:76:c5:なんとか      1      60  I-O DATA DEVICE,INC. #無線LAN AP
  グローバルっぽいIP   ここにMACアドレス      1      60  HOGEPIYO Co., Ltd. #1行目のONUと同じやつ?
 ```
+
+## DNS SPFレコード(TXT)
+
+メールサーバの設定で使った
+
+SPFのレコード設定があっているかの確認
+https://mxtoolbox.com/spf.aspx
+SPFのレコードをチェックしてくれるwebツール
+
+## mDNS
+
+マルチキャストDNS。LAN内でホスト名からIPアドレスを解決する通信プロトコル。DNSサーバが不要で機器同士直接通信をする。
+UDP5353ポートにマルチキャストして一斉問い合わせをして、該当する端末が返答することで解決する。
+なのでVLANとかルータ跨ぎは不可。
+AppleのBonjourとかAvahiとか。
